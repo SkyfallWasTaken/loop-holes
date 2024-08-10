@@ -5,7 +5,7 @@ export enum Sprite {
 }
 
 export function loadSprites(k: KAPLAYCtx) {
-  for (const sprite in Sprite) {
-    k.loadSprite(Sprite[sprite], Sprite[sprite]);
-  }
+  Object.entries(Sprite).forEach(([key, value]) => {
+    k.loadSprite(key, value);
+  });
 }
