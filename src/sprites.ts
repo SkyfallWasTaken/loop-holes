@@ -1,13 +1,13 @@
 import { KAPLAYCtx } from "kaplay";
 
 export const Sprite = {
-  Bean: "Bean",
+  Player: "Player",
 } as const;
 
 type SpriteType = (typeof Sprite)[keyof typeof Sprite];
 
 const SpritePaths: Record<SpriteType, string> = {
-  Bean: "sprites/bean.png",
+  Player: "sprites/player.png",
 };
 
 export function loadSprites(k: KAPLAYCtx) {
